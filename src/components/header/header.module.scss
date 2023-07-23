@@ -1,0 +1,29 @@
+.header {
+  padding: 10px 16px;
+}
+.light {
+  background-color: var(--color-dark-300);
+}
+.dark {
+  background-color: var(--color-dark-700);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  span {
+    border-bottom: 1px dashed #fff;
+  }
+}

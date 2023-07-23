@@ -1,0 +1,97 @@
+.btn {
+  display: inline-flex;
+  padding: 6px 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  border: none;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  &:focus {
+    outline: 2px solid var(--color-info-700, #2f68cc);
+  }
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.primary {
+  background-color: var(--color-accent-500, #8c61ff);
+  box-shadow: 0px 4px 18px 0px rgba(140, 97, 255, 0.35);
+  &:focus {
+    background-color: var(--color-accent-500, #8c61ff);
+  }
+  &:hover {
+    background-color: var(--color-accent-300, #a280ff);
+  }
+  &:active {
+    background-color: var(--color-accent-700, #704ecc);
+  }
+  &:disabled {
+    background-color: var(--color-accent-900, #382766);
+    color: var(--color-light-900, #c3c1c7);
+  }
+}
+
+.secondary {
+  background: var(--color-dark-500, #333);
+  box-shadow: 0px 2px 10px 0px rgba(109, 109, 109, 0.25);
+  &:focus {
+    background: var(--color-dark-300, #4c4c4c);
+  }
+  &:hover {
+    background: var(--color-dark-100, #808080);
+  }
+  &:active {
+    background: var(--color-dark-500, #333);
+  }
+  &:disabled {
+    background: var(--color-dark-300, #4c4c4c);
+    color: var(--color-light-900, #c3c1c7);
+  }
+}
+
+.tertiary {
+  border: 1px solid var(--color-accent-500, #8c61ff);
+  color: var(--color-accent-500, #8c61ff);
+  background-color: var(--color-dark-900, #000);
+  &:hover {
+    border: 1px solid var(--primary-700, #704ecc);
+    background-color: var(--color-dark-500, #333);
+  }
+  &:active {
+    border: 1px solid var(--color-accent-700, #704ecc);
+    background-color: var(--color-accent-900, #382766);
+  }
+  &:disabled {
+    color: var(--color-accent-900, #382766);
+    border: 1px solid var(--color-accent-900, #382766);
+  }
+}
+
+.link {
+  color: var(--color-accent-500, #8c61ff);
+  border: none;
+  background-color: inherit;
+  padding-inline: 16px;
+  &:focus {
+    border-radius: 20px;
+  }
+  &:hover {
+    color: var(--color-accent-300, #a280ff);
+  }
+  &:active {
+    color: var(--color-accent-700, #704ecc);
+  }
+  &:disabled {
+    color: var(--color-accent-900, #382766);
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}

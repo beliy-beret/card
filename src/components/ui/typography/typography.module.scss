@@ -1,0 +1,67 @@
+.text {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    color: var(--color-dark-900, #000);
+}
+.Large {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36px;
+}
+.H1 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 36px;
+}
+.H2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.H3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.Body_1 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.Subtitle_1 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.Body_2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.Subtitle_2 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.Caption {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+.Overline {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+}
+.Link_1 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: underline;
+}
+.Link_2 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration-line: underline;
+}

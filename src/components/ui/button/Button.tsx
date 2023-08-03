@@ -26,7 +26,7 @@ export const Button = <T extends ElementType = 'button'>(
       className={`${css.btn} ${css[variant]} ${fullWidth ? css.fullWidth : ''} ${className}`}
       {...rest}
     >
-      {icon && <img src={icon} alt="icon" />}
+      {icon && <img src={icon} />}
       {rest.children}
     </Component>
   )

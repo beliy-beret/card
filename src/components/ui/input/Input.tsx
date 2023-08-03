@@ -2,11 +2,10 @@ import { FC, InputHTMLAttributes, DetailedHTMLProps, useState, ChangeEvent } fro
 
 import css from './input.module.scss'
 
-//import closeOpticIcon from 'assets/icons/close_optic.svg'
-import { CloseOptic } from 'assets/icons/CloseOptic'
-import deleteIcon from 'assets/icons/delete.svg'
-import opticIcon from 'assets/icons/optic.svg'
-import searchIcon from 'assets/icons/search.svg'
+import { CloseOpticIcon } from 'assets/icons/CloseOpticIcon'
+import { DeleteIcon } from 'assets/icons/DeleteIcon'
+import { OpticIcon } from 'assets/icons/OpticIcon'
+import { SearchIcon } from 'assets/icons/SearchIcon'
 
 type DefaultProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
@@ -50,14 +49,19 @@ export const Input: FC<Props> = ({
 
   const componentStyle = `${className} ${css.label}`
   const inputStyle = error || errorMessage ? css.error : ''
+  const opticIcon = open ? (
+    <CloseOpticIcon fill="#fff" className={css.optic} onClick={openHandler} />
+  ) : (
+    <OpticIcon fill="#fff" className={css.optic} onClick={openHandler} />
+  )
 
   return (
     <>
       <label className={componentStyle}>
-        {type === 'password' && <CloseOptic fill="#fff" />}
-        {type === 'search' && <img src={searchIcon} className={css.search} />}
+        {type === 'password' && opticIcon}
+        {type === 'search' && <SearchIcon fill="#fff" className={css.search} />}
         {type === 'search' && inputValue && (
-          <img src={deleteIcon} className={css.delete} onClick={cleanInputValue} />
+          <DeleteIcon fill="#fff" className={css.delete} onClick={cleanInputValue} />
         )}
 
         {label && <span>{label}</span>}

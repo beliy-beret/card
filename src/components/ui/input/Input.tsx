@@ -29,11 +29,17 @@ export const Input: FC<Props> = ({
   value,
   ...rest
 }) => {
-  // const [inputValue, setInputValue] = useState(() => (value ? value : ''))
+  const [inputValue, setInputValue] = useState(() => (value ? value : ''))
 
   const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
     onChange?.(e)
     onChangeValue?.(e.currentTarget.value)
+    setInputValue(e.currentTarget.value)
+  }
+
+  const clearInput = () => {
+    clearHandler?.()
+    setInputValue('')
   }
 
   const [inputType, setInputType] = useState<string>(type || 'text')
@@ -61,12 +67,18 @@ export const Input: FC<Props> = ({
       <label className={componentStyle}>
         {type === 'password' && opticIcon}
         {type === 'search' && <SearchIcon fill="#fff" className={css.search} />}
-        {type === 'search' && clearHandler && (
-          <DeleteIcon fill="#fff" className={css.delete} onClick={clearHandler} />
+        {type === 'search' && inputValue && (
+          <DeleteIcon fill="#fff" className={css.delete} onClick={clearInput} />
         )}
 
         {label && <span>{label}</span>}
-        <input type={inputType} className={inputStyle} onChange={onChangeCallback} {...rest} />
+        <input
+          type={inputType}
+          className={inputStyle}
+          value={inputValue}
+          onChange={onChangeCallback}
+          {...rest}
+        />
         {errorMessage && <span className={css.message}>{errorMessage}</span>}
       </label>
     </>

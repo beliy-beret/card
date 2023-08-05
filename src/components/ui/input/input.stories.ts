@@ -38,11 +38,13 @@ export const InputWithErrorMessage: Story = {
 export const TypeSearch: Story = {
   args: {
     type: 'search',
+    clearHandler: () => {},
   },
 }
 
 export const TypePassword: Story = {
   args: {
     type: 'password',
+    label: 'password',
   },
 }

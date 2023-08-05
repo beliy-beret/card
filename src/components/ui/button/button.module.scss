@@ -10,7 +10,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
-  &:focus {
+  &:focus:not(:active) {
     outline: 2px solid var(--color-info-700, #2f68cc);
   }
   svg {

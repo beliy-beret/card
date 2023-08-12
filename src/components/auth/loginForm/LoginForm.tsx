@@ -1,26 +1,13 @@
 import { DevTool } from '@hookform/devtools'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, Controller } from 'react-hook-form'
-import { z } from 'zod'
 
 import css from './loginForm.module.scss'
 
+import { loginSchema, type FormValues } from 'components/auth/loginForm/validation'
 import { Button } from 'components/ui/button'
 import { CheckBox } from 'components/ui/checkBox'
 import { Input } from 'components/ui/input'
-
-type FormValues = {
-  email: string
-  password: string
-  rememberMe?: boolean
-}
-
-const loginSchema = z.object({
-  email: z.string().email({
-    message: 'Invalid email',
-  }),
-  password: z.string().min(3),
-})
 
 export const LoginForm = () => {
   const {

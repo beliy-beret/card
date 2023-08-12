@@ -1,29 +1,17 @@
-.checkBox {
-    padding-left: 24px;
-    display: flex;
-    align-items: center;
-    background-color: inherit;
-    position: relative;
-    span {
-        margin-left: 5px;
-        &::before {        
-            display: inline-block;
-            content: '';
-            width: 21px;
-            height: 21px;
-            border: 3px solid var(--color-light-900, #c3c1c7);
-            border-radius: 3px;
-            position: absolute;
-            left: 0;
-            top: 2px;
-        }             
+.checkBox {    
+    button {
+        all: unset;
     }
     
-    input {
-        display: none;
-        &:checked ~ span::before {
-            background: no-repeat center/24px url(../../../assets/icons/check.svg);
-            border: none;
-        }
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+
+    .box {
+        width: 24px;
+        height: 24px;
+        background-color: aliceblue;    
     }
+
 }

@@ -8,7 +8,6 @@ import { Input } from 'components/ui/input'
 export const Root = () => {
   const [value, setValue] = useState('some text')
   const valueHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    console.log(e.currentTarget.value)
     setValue(e.currentTarget.value)
   }
 

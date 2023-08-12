@@ -13,7 +13,7 @@ type Props = {
   required?: boolean
   name?: string
   value?: string
-  onCheckedChange: () => void
+  onCheckedChange?: () => void
 }
 
 export const CheckBox: FC<Props> = ({ label, ...props }) => {

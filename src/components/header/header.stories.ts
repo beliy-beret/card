@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import logo from '../../assets/images/Logo.png'
-import ava from '../../assets/images/user.jpg'
-
 import { Header } from '.'
+
+import logo from 'assets/images/Logo.png'
+import ava from 'assets/images/user.jpg'
 
 const meta = {
   title: 'Components/Header',

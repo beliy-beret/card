@@ -23,7 +23,7 @@ export const LoginForm = () => {
     resolver: zodResolver(loginSchema),
   })
 
-  const onSubmit = (data: FormValues) => {}
+  const onSubmit = () => {}
 
   return (
     <form className={css.form} onSubmit={handleSubmit(onSubmit)}>

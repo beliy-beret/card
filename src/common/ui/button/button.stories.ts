@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from './'
 
-import icon from 'assets/icons/logout.svg'
+import icon from 'common/assets/icons/logout.svg'
 
 const meta = {
   title: 'Components/Button',
@@ -13,6 +13,7 @@ const meta = {
       options: ['primary', 'secondary', 'tertiary', 'link'],
       control: { type: 'radio' },
     },
+    onClick: { action: 'Button clicked' },
   },
 } satisfies Meta<typeof Button>
 
@@ -50,10 +51,10 @@ export const Tertiary: Story = {
     disabled: false,
   },
 }
-export const Link: Story = {
+export const AsLink: Story = {
   args: {
     variant: 'link',
-    children: 'Tertiary Button',
+    children: 'Button as link',
     disabled: false,
   },
 }
@@ -67,7 +68,7 @@ export const FullWidth: Story = {
   },
 }
 
-export const AsLink: Story = {
+export const LinkAsButton: Story = {
   args: {
     variant: 'primary',
     children: 'Link that looks like a button',

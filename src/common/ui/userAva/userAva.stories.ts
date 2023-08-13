@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import ava from '../../../assets/images/user.jpg'
+import { UserAva } from './UserAva'
 
-import { UserAva } from '.'
+import ava from 'common/assets/images/user.jpg'
 
 const meta = {
   title: 'Components/UserAva',

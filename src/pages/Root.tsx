@@ -1,9 +1,9 @@
 import { ChangeEvent, useState } from 'react'
 
-import logo from 'assets/images/Logo.png'
-import user from 'assets/images/user.jpg'
+import logo from 'common/assets/images/Logo.png'
+import user from 'common/assets/images/user.jpg'
+import { Input } from 'common/ui/input'
 import { Header } from 'components/header'
-import { Input } from 'components/ui/input'
 
 export const Root = () => {
   const [value, setValue] = useState('some text')

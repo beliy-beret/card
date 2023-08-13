@@ -4,7 +4,7 @@ import * as RadixCheckbox from '@radix-ui/react-checkbox'
 
 import css from './checkbox.module.scss'
 
-import { CheckIcon } from 'assets/icons/CheckIcon'
+import { CheckIcon } from 'common/assets/icons/CheckIcon'
 
 type Props = {
   label?: string

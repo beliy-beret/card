@@ -11,6 +11,7 @@ type Props = ComponentProps<'input'> & {
   label?: string
   error?: boolean
   errorMessage?: string
+  fullWidth?: boolean
   onChangeValue?: (value: string) => void
   onClear?: () => void
 }
@@ -25,6 +26,7 @@ export const Input: FC<Props> = ({
   type,
   onClear,
   value,
+  fullWidth,
   ...rest
 }) => {
   const [inputValue, setInputValue] = useState(() => (value ? value : ''))
@@ -52,7 +54,7 @@ export const Input: FC<Props> = ({
     }
   }
 
-  const componentStyle = `${className} ${css.label}`
+  const componentStyle = `${css.label} ${className}`
   const inputStyle = error || errorMessage ? css.error : ''
   const opticIcon = open ? (
     <CloseOpticIcon fill="#fff" className={css.optic} onClick={openHandler} />
@@ -62,7 +64,7 @@ export const Input: FC<Props> = ({
 
   return (
     <>
-      <label className={componentStyle}>
+      <label className={componentStyle} style={{ width: fullWidth ? '100%' : '' }}>
         {type === 'password' && opticIcon}
         {type === 'search' && <SearchIcon fill="#fff" className={css.search} />}
         {type === 'search' && inputValue && (

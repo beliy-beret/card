@@ -1,6 +1,37 @@
 .form {
+    max-width: 420px;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;    
+    gap: 24px;
+    background-color: var(--color-dark-700, #171717);
+    padding: 30px 35px;
+
+    .title {
+        text-align: center;
+        color: var(--color-light-100, #fff)
+    }
+    .btnBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }    
+    
+    .signUpLink {       
+        color: var(--color-accent-500, #8C61FF);
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;        
+    }
+    .rememberMe {
+        display: flex;
+        flex-direction: column;
+    }
+    .restorePasswordLink {
+        text-decoration: none;
+        align-self: flex-end;
+    }
 }

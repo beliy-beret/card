@@ -2,19 +2,17 @@ import { FC, ComponentProps, useState, ChangeEvent } from 'react'
 
 import css from './input.module.scss'
 
-import { CloseOpticIcon } from 'assets/icons/CloseOpticIcon'
-import { DeleteIcon } from 'assets/icons/DeleteIcon'
-import { OpticIcon } from 'assets/icons/OpticIcon'
-import { SearchIcon } from 'assets/icons/SearchIcon'
-
-//type DefaultProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+import { CloseOpticIcon } from 'common/assets/icons/CloseOpticIcon'
+import { DeleteIcon } from 'common/assets/icons/DeleteIcon'
+import { OpticIcon } from 'common/assets/icons/OpticIcon'
+import { SearchIcon } from 'common/assets/icons/SearchIcon'
 
 type Props = ComponentProps<'input'> & {
   label?: string
   error?: boolean
   errorMessage?: string
   onChangeValue?: (value: string) => void
-  clearHandler?: () => void
+  onClear?: () => void
 }
 
 export const Input: FC<Props> = ({
@@ -25,7 +23,7 @@ export const Input: FC<Props> = ({
   errorMessage,
   onChange,
   type,
-  clearHandler,
+  onClear,
   value,
   ...rest
 }) => {
@@ -38,7 +36,7 @@ export const Input: FC<Props> = ({
   }
 
   const clearInput = () => {
-    clearHandler?.()
+    onClear?.()
     setInputValue('')
   }
 

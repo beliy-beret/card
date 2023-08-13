@@ -1,9 +1,9 @@
 import { FC } from 'react'
 
-import { Button } from '../ui/button'
-import { UserAva } from '../ui/userAva'
-
 import css from './header.module.scss'
+
+import { Button } from 'common/ui/button'
+import { UserAva } from 'common/ui/userAva'
 
 export type HeaderProps = {
   logo: string

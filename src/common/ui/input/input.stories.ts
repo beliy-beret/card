@@ -6,6 +6,9 @@ const meta = {
   title: 'Components/Input',
   component: Input,
   tags: ['autodocs'],
+  argTypes: {
+    onClear: () => {},
+  },
 } satisfies Meta<typeof Input>
 
 export default meta
@@ -38,7 +41,6 @@ export const InputWithErrorMessage: Story = {
 export const TypeSearch: Story = {
   args: {
     type: 'search',
-    clearHandler: () => {},
   },
 }
 

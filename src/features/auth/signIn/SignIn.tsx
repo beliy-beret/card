@@ -44,7 +44,7 @@ export const SignIn: FC<Props> = ({ onSubmit }) => {
           name="email"
           control={control}
           render={({ field }) => (
-            <Input {...field} label={'Email'} errorMessage={errors.email?.message} />
+            <Input {...field} label={'Email'} errorMessage={errors.email?.message} fullWidth />
           )}
         />
       </div>
@@ -58,6 +58,7 @@ export const SignIn: FC<Props> = ({ onSubmit }) => {
               type="password"
               label="Password"
               errorMessage={errors.password?.message}
+              fullWidth
             />
           )}
         />

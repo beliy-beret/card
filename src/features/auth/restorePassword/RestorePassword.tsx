@@ -4,7 +4,7 @@ import { DevTool } from '@hookform/devtools'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, Controller } from 'react-hook-form'
 
-import css from './signUp.module.scss'
+import css from './restorePassword.module.scss'
 import { formSchema, type FormValues } from './validation'
 
 import { Button } from 'common/ui/button'
@@ -15,15 +15,14 @@ type Props = {
   onSubmit: (data: FormValues) => void
 }
 
-export const SignUp: FC<Props> = ({ onSubmit }) => {
+export const RestorePassword: FC<Props> = ({ onSubmit }) => {
   const {
     handleSubmit,
     control,
     formState: { errors },
   } = useForm<FormValues>({
     defaultValues: {
-      password: '',
-      confirm: '',
+      email: '',
     },
     resolver: zodResolver(formSchema),
   })
@@ -34,7 +33,7 @@ export const SignUp: FC<Props> = ({ onSubmit }) => {
     <form className={css.form} onSubmit={handleSubmit(submit)}>
       <DevTool control={control} />
       <Typography variant="Large" as="h2" className={css.title}>
-        Sign Up
+        Forgot your password?
       </Typography>
 
       <div>
@@ -42,48 +41,26 @@ export const SignUp: FC<Props> = ({ onSubmit }) => {
           name="email"
           control={control}
           render={({ field }) => (
-            <Input {...field} label={'Email'} errorMessage={errors.email?.message} fullWidth />
-          )}
-        />
-      </div>
-      <div>
-        <Controller
-          name="password"
-          control={control}
-          render={({ field }) => (
             <Input
+              className={css.textField}
               {...field}
-              type="password"
-              label="Password"
-              errorMessage={errors.password?.message}
+              label={'Email'}
+              errorMessage={errors.email?.message}
               fullWidth
             />
           )}
         />
+        <Typography variant="Body_2" className={css.description}>
+          Enter your email address and we will send you further instructions
+        </Typography>
       </div>
-      <div>
-        <Controller
-          name="confirm"
-          control={control}
-          render={({ field }) => (
-            <Input
-              {...field}
-              type="password"
-              label="Confirm password"
-              errorMessage={errors.confirm?.message}
-              fullWidth
-            />
-          )}
-        />
-      </div>
-
       <div className={css.btnBlock}>
         <Button variant="primary" type="submit" fullWidth>
-          Sign Up
+          Send Instructions
         </Button>
-        <Typography className={css.title}>Already have an account?</Typography>
+        <Typography className={css.description}>Did you remember your password?</Typography>
         <a className={css.signUpLink} href="/">
-          Sign In
+          Try logging in
         </a>
       </div>
     </form>

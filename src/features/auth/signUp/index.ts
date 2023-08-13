@@ -1,1 +1,1 @@
-export * as SignInForm from './SignUp'
+export * as SignUp from './SignUp'

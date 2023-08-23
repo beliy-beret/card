@@ -5,16 +5,9 @@ import 'common/styles/index.scss'
 import { StrictMode } from 'react'
 
 import { createRoot } from 'react-dom/client'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
 
-import { Root } from 'pages/Root'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Root />,
-  },
-])
+import { router } from 'app/router'
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
